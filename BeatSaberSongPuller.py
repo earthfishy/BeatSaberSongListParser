@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[72]:
-
-
 import numpy as np
 import os
 
@@ -73,15 +67,9 @@ for subdir, dirs, files in os.walk(rootdir):
     else:
         continue
 
-
-# In[73]:
-
-
 for songNum, songInfo in songList.items():
     print(songInfo['songName'],",",songInfo['artistName'],",",songInfo['modderName'])
 
-
-# In[ ]:
 
 
 
