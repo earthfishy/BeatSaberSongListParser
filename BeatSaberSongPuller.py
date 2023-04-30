@@ -1,7 +1,8 @@
 import numpy as np
 import os
 
-rootdir = "D:\Oculus\Software\hyperbolic-magnetism-beat-saber\Beat Saber_Data\CustomLevels"
+#rootdir = "D:\Oculus\Software\hyperbolic-magnetism-beat-saber\Beat Saber_Data\CustomLevels"
+rootdir = input("Enter location of 'CustomLevels' folder: ")
 
 def fileLines(file):
     line_count = 0
