@@ -1,5 +1,7 @@
 import numpy as np
 import os
+import requests
+import json
 
 #rootdir = "D:\Oculus\Software\hyperbolic-magnetism-beat-saber\Beat Saber_Data\CustomLevels"
 rootdir = input("Enter location of 'CustomLevels' folder: ")
@@ -72,6 +74,12 @@ for songNum, songInfo in songList.items():
     print(songInfo['songName'],",",songInfo['artistName'],",",songInfo['modderName'])
 
 
+url = "https://api.beatsaver.com/search/text/0?q=24K%20Magic%2C%20Bruno%20Mars%2C%20BennyDaBeast&sortOrder=Relevance"
 
+response = requests.get(url)
 
+print(response.status_code)
 
+response_json = response.json()
+response_dict = json.loads(response_json)
+print(response_dict)
